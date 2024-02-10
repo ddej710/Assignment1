@@ -1,0 +1,77 @@
+//Script 1 redCubeScript
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class redcubeScript : MonoBehaviour
+
+    
+    
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int redcubeNumber = 5;
+       
+        Debug.Log(redcubeNumber);
+        
+
+        
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+       
+    }
+}
+
+//Script 2 introName
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class introName : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        string intro = "My name is";
+        string myName = "Dylan DeJesus";
+
+        Debug.Log(intro + " " + myName);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+//Script 3 itisTrue
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class itisTrue : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        bool isitTrue = true;
+
+        Debug.Log(isitTrue);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
