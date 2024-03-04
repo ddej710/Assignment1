@@ -1,0 +1,70 @@
+// Capsule Script
+{
+float moveSpeed;
+    float horizontalInput;
+    float verticalInput;
+    float jumpHeight;
+    Rigidbody playerRB;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        moveSpeed = 10f;
+        playerRB = GetComponent<Rigidbody>();
+        jumpHeight = 10;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(horizontalInput * moveSpeed * Time.deltaTime, 0, 0);
+
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(0, verticalInput * moveSpeed * Time.deltaTime, 0);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            playerRB.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+        }
+
+
+    }
+}
+
+// Cube Script
+public class cubeScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int rotateSpeed = 75;
+        transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+
+// Sphere Script
+
+public class sphereScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        float moveUp = 6.5f;
+        transform.Translate(0, moveUp * Time.deltaTime, 0);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
